@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/02/13 10:43:59.578.pas,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Home.pas</Transaction>
+    <Transaction>2020/02/13 10:43:59.578.dfm,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Home.dfm</Transaction>
+    <Transaction>2020/02/13 11:00:27.579.pas,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Login.pas</Transaction>
+    <Transaction>2020/02/13 11:00:27.579.dfm,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Login.dfm</Transaction>
+    <Transaction>2020/02/13 11:01:21.741.pas,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Cadastro.pas</Transaction>
+    <Transaction>2020/02/13 11:01:21.741.dfm,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Cadastro.dfm</Transaction>
+    <Transaction>2020/02/13 11:02:48.365.pas,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_CadastroProduto.pas</Transaction>
+    <Transaction>2020/02/13 11:02:48.365.dfm,C:\Users\lfernandes\Documents\Borland Studio Projects\Unit1.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_CadastroProduto.dfm</Transaction>
+    <Transaction>2020/02/13 11:02:58.610.bdsproj,C:\Users\lfernandes\Documents\Borland Studio Projects\Project1.bdsproj=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\Project1.bdsproj</Transaction>
+    <Transaction>2020/02/13 11:53:58.086.pas,C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_CadastroProduto.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Produto.pas</Transaction>
+    <Transaction>2020/02/13 11:53:58.086.dfm,C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_CadastroProduto.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Produto.dfm</Transaction>
+    <Transaction>2020/02/14 10:29:54.467.pas,C:\Users\lfernandes\Desktop\ProjetoUruguaiana\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Funcoes.pas</Transaction>
+    <Transaction>2020/02/17 09:39:22.908.pas,C:\Users\lfernandes\Desktop\ProjetoUruguaiana\Unit1.pas=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Anuncio.pas</Transaction>
+    <Transaction>2020/02/17 09:39:22.908.dfm,C:\Users\lfernandes\Desktop\ProjetoUruguaiana\Unit1.dfm=C:\Users\lfernandes\Desktop\ProjetoUruguaiana\U_Anuncio.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
