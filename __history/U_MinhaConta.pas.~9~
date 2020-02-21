@@ -19,7 +19,6 @@ type
     Memo3: TMemo;
     Memo4: TMemo;
     Memo5: TMemo;
-    Button1: TButton;
     procedure FormShow(Sender: TObject);
     procedure ScrollBox1CanResize(Sender: TObject; var NewWidth,
       NewHeight: Integer; var Resize: Boolean);
