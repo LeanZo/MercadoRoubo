@@ -1,0 +1,49 @@
+unit U_MinhaConta;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TF_MinhaConta = class(TForm)
+    ScrollBox1: TScrollBox;
+    LblNome1: TLabel;
+    LblNome2: TLabel;
+    LblNome3: TLabel;
+    LblNome4: TLabel;
+    LblNome5: TLabel;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    Memo3: TMemo;
+    Memo4: TMemo;
+    Memo5: TMemo;
+    procedure FormShow(Sender: TObject);
+    procedure ScrollBox1CanResize(Sender: TObject; var NewWidth,
+      NewHeight: Integer; var Resize: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  F_MinhaConta: TF_MinhaConta;
+
+implementation
+
+{$R *.dfm}
+
+procedure TF_MinhaConta.FormShow(Sender: TObject);
+begin
+  showmessage(IntToStr(GetScrollPos(ScrollBox1.Handle,SB_VERT)));
+end;
+
+procedure TF_MinhaConta.ScrollBox1CanResize(Sender: TObject; var NewWidth,
+  NewHeight: Integer; var Resize: Boolean);
+begin
+  showmessage('ScrollBox1CanResize  ' + IntToStr(GetScrollPos(ScrollBox1.Handle,SB_VERT)));
+end;
+
+end.

@@ -1,0 +1,35 @@
+unit U_MinhaConta;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  Ts = class(TForm)
+    ScrollBox1: TScrollBox;
+    LblNome1: TLabel;
+    LblNome2: TLabel;
+    LblNome3: TLabel;
+    LblNome4: TLabel;
+    LblNome5: TLabel;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    Memo3: TMemo;
+    Memo4: TMemo;
+    Memo5: TMemo;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  s: Ts;
+
+implementation
+
+{$R *.dfm}
+
+end.

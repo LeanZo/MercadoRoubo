@@ -32,18 +32,10 @@ uses
 
 procedure TF_Login.BtnEntrarClick(Sender: TObject);
 begin
-  //F_Home.AtualizarLogin(True);
-
-  //F_Login.Close;
-
-  //Exit;
-   //apagar dps /\
-
-
-
-
-	//DmAux.Qry_Login.Close;
+ 	//DmAux.Qry_Login.Close;
   DmAux.Qry_Login.sql.clear;
+  if(EditLoginValue.text <> '') then  //REMOVER IF NO FIM - SERVE PARA LOGAR DIRETO NO MASTER
+  begin
   DmAux.Qry_Login.sql.text :=	'SELECT                     ' +
                         			'	*                         ' +
                               'FROM                       ' +
@@ -54,6 +46,16 @@ begin
                               '	SENHA = :Senha      			';
   DmAux.Qry_Login.ParamByName('Login').AsString := EditLoginValue.text;
   DmAux.Qry_Login.ParamByName('Senha').AsString := MD5(EditSenhaValue.text);
+  end
+  else
+  begin
+  DmAux.Qry_Login.sql.text :=	'SELECT                     ' +
+                        			'	*                         ' +
+                              'FROM                       ' +
+                              '	usuario (NOLOCK)        	' +
+												      'WHERE                      ' +
+                              '	LOGIN = ''master''   			';
+  end;
   DmAux.Qry_Login.open;
 
   if (DmAux.Qry_Login.IsEmpty) then

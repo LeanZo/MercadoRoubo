@@ -76,6 +76,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure LblAnteriorClick(Sender: TObject);
     procedure BtnPesquisarClick(Sender: TObject);
+    procedure Label18Click(Sender: TObject);
   private
     { Private declarations }
     _labeldm : TLabel;
@@ -101,7 +102,7 @@ var
 implementation
 
 uses
-  U_Cadastro, U_Aux, U_Produto;
+  U_Cadastro, U_Aux, U_Produto, U_MinhaConta;
 
 {$R *.dfm}
 
@@ -517,6 +518,12 @@ begin
 
   CBCategoria.ListSource.DataSet.Locate('DESCRICAO', 'Categorias', []);
 	CBCategoria.KeyValue := CBCategoria.ListSource.DataSet.FieldByName(CBCategoria.KeyField).Value;
+end;
+
+procedure TF_Home.Label18Click(Sender: TObject);
+begin
+  Application.CreateForm(TF_MinhaConta, F_MinhaConta);
+  F_MinhaConta.showmodal;
 end;
 
 procedure TF_Home.LblAnteriorClick(Sender: TObject);

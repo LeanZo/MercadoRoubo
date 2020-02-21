@@ -1,9 +1,11 @@
 object F_Login: TF_Login
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'Login'
-  ClientHeight = 191
-  ClientWidth = 249
+  ClientHeight = 178
+  ClientWidth = 247
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText

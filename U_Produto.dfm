@@ -1,6 +1,7 @@
 object F_Produto: TF_Produto
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro de produto'
   ClientHeight = 382

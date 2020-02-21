@@ -1,0 +1,126 @@
+object F_MinhaConta: TF_MinhaConta
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Minha Conta'
+  ClientHeight = 482
+  ClientWidth = 413
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ScrollBox1: TScrollBox
+    Left = 8
+    Top = 16
+    Width = 361
+    Height = 241
+    TabOrder = 0
+    object LblNome1: TLabel
+      Left = 330
+      Top = 300
+      Width = 27
+      Height = 13
+      Caption = 'Nome'
+      Visible = False
+    end
+    object LblNome2: TLabel
+      Left = 311
+      Top = 225
+      Width = 46
+      Height = 13
+      Caption = 'LblNome2'
+      Transparent = False
+      Visible = False
+    end
+    object LblNome3: TLabel
+      Left = 311
+      Top = 154
+      Width = 46
+      Height = 13
+      Caption = 'LblNome3'
+      Visible = False
+    end
+    object LblNome4: TLabel
+      Left = 311
+      Top = 83
+      Width = 46
+      Height = 13
+      Caption = 'LblNome4'
+      Visible = False
+    end
+    object LblNome5: TLabel
+      Left = 311
+      Top = 8
+      Width = 46
+      Height = 13
+      Caption = 'LblNome5'
+      Visible = False
+    end
+    object Memo1: TMemo
+      Left = 148
+      Top = 319
+      Width = 209
+      Height = 46
+      BorderStyle = bsNone
+      Lines.Strings = (
+        'Memo1')
+      ReadOnly = True
+      TabOrder = 0
+      Visible = False
+    end
+    object Memo2: TMemo
+      Left = 148
+      Top = 246
+      Width = 209
+      Height = 46
+      BorderStyle = bsNone
+      Lines.Strings = (
+        'Memo1')
+      ReadOnly = True
+      TabOrder = 1
+      Visible = False
+    end
+    object Memo3: TMemo
+      Left = 148
+      Top = 173
+      Width = 209
+      Height = 46
+      BorderStyle = bsNone
+      Lines.Strings = (
+        'Memo1')
+      ReadOnly = True
+      TabOrder = 2
+      Visible = False
+    end
+    object Memo4: TMemo
+      Left = 148
+      Top = 102
+      Width = 209
+      Height = 46
+      BorderStyle = bsNone
+      Lines.Strings = (
+        'Memo1')
+      ReadOnly = True
+      TabOrder = 3
+      Visible = False
+    end
+    object Memo5: TMemo
+      Left = 148
+      Top = 27
+      Width = 209
+      Height = 46
+      BorderStyle = bsNone
+      Lines.Strings = (
+        'Memo1')
+      ReadOnly = True
+      TabOrder = 4
+      Visible = False
+    end
+  end
+end

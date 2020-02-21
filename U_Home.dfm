@@ -3143,6 +3143,7 @@ object F_Home: TF_Home
     Font.Name = 'Gigi'
     Font.Style = [fsBold]
     ParentFont = False
+    OnClick = Label18Click
   end
   object LblAnterior: TLabel
     Left = 422
@@ -3482,9 +3483,9 @@ object F_Home: TF_Home
     TabOrder = 12
   end
   object BtnCriarAnuncio: TsuiButton
-    Left = 818
+    Left = 816
     Top = 22
-    Width = 77
+    Width = 79
     Height = 23
     Caption = 'Criar anuncio'
     AutoSize = False

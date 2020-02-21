@@ -1,0 +1,151 @@
+unit U_Anuncio;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, SUIButton, StdCtrls, jpeg, ExtCtrls;
+
+type
+  TF_Anuncio = class(TForm)
+    Img1: TImage;
+    Lbl1: TLabel;
+    LblP1: TLabel;
+    Mm1: TMemo;
+    RbCartao: TRadioButton;
+    RbBoleto: TRadioButton;
+    BtnIrCompra: TsuiButton;
+    LblAdicionarCarrinho: TLabel;
+    LblNome1: TLabel;
+    LblNome2: TLabel;
+    LblNome3: TLabel;
+    LblNome4: TLabel;
+    LblNome5: TLabel;
+    Memo1: TMemo;
+    Memo2: TMemo;
+    Memo3: TMemo;
+    Memo4: TMemo;
+    Memo5: TMemo;
+    BtnAddComentario: TsuiButton;
+    MmComentario: TMemo;
+    procedure FormShow(Sender: TObject);
+    procedure BtnAddComentarioClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+  comentarioid: string;
+  anuncioid: string;
+    { Public declarations }
+  end;
+
+var
+  F_Anuncio: TF_Anuncio;
+  Card: Integer;
+
+  cont: Array[0..4] of integer;
+
+implementation
+
+uses U_Aux;
+
+{$R *.dfm}
+
+procedure TF_Anuncio.BtnAddComentarioClick(Sender: TObject);
+begin
+  with DmAux.Qry_Aux do
+  begin
+    sql.close;
+    sql.Clear;
+    sql.Add('insert into comentario values(:anuncioid,:comentario,:usuarioid)');
+    ParamByName('anuncioid').AsInteger := StrToInt(anuncioid);
+    ParambyName('comentario').AsString := MmComentario.Lines.Text;
+    ParamByName('usuarioid').AsInteger := DmAux.Qry_Login.FieldByName('usuarioid').AsInteger;
+    execsql;
+  end;
+end;
+
+procedure TF_Anuncio.FormShow(Sender: TObject);
+begin
+   Card := 1;
+
+	with DmAux.Qry_Aux do
+  begin
+		Close;
+    Sql.Clear;
+    Sql.Add('select * from anuncio where anuncioid = :anuncioid');
+    ParamByName('anuncioid').AsInteger := StrToInt(anuncioid);
+
+    Open;
+  end;
+  Lbl1.Caption := DmAux.Qry_Aux.FieldByName('NOME').AsString;
+  Mm1.Lines.Clear;
+  Mm1.Lines.Add(DmAux.Qry_Aux.FieldByName('DESCRICAO').AsString);
+  LblP1.Caption := 'R$ ' + DmAux.Qry_Aux.FieldByName('PRECO').AsString;
+  Img1.Picture.LoadFromFile(DmAux.Qry_Aux.FieldByName('CAMINHO').AsString);
+
+  with DmAux.Qry_Aux do
+  begin
+    close;
+    sql.clear;
+    sql.add('select top 5 c.comentario, u.nome from comentario c, usuario u where c.anuncioid = :anuncioid and u.usuarioid = c.usuarioid');
+    //sql.add('select top 5 nome from usuario where anuncioid = :anuncioid');
+    ParamByName('anuncioid').AsInteger := StrToInt(anuncioid);
+
+    open;
+  end;
+
+  while  not DmAux.Qry_aux.Eof do
+  begin
+      case Card of
+      1:
+      begin
+         Memo1.lines.Clear;
+         Lblnome1.Caption := DmAux.Qry_Aux.FieldByName('nome').AsString;
+         Memo1.lines.Add(DmAux.Qry_Aux.FieldByName('comentario').AsString);
+         memo1.Visible := true;
+         Lblnome1.Visible := true;
+      end;
+      2:
+      begin
+        Memo2.lines.Clear;
+        Lblnome2.Caption := DmAux.Qry_Aux.FieldByName('nome').AsString;
+        Memo2.lines.Add(DmAux.Qry_Aux.FieldByName('comentario').AsString);
+        memo2.Visible := true;
+        Lblnome2.Visible := true;
+      end;
+      3:
+      begin
+         Memo3.lines.Clear;
+         Lblnome3.Caption := DmAux.Qry_Aux.FieldByName('nome').AsString;
+         Memo3.lines.Add(DmAux.Qry_Aux.FieldByName('comentario').AsString);
+         memo3.Visible := true;
+         Lblnome3.Visible := true;
+      end;
+
+      4:
+      begin
+         Memo4.lines.Clear;
+         Lblnome4.Caption := DmAux.Qry_Aux.FieldByName('nome').AsString;
+         Memo4.lines.Add(DmAux.Qry_Aux.FieldByName('comentario').AsString);
+         memo4.Visible := true;
+         Lblnome4.Visible := true;
+      end;
+
+      5:
+      begin
+         Memo5.lines.Clear;
+         Lblnome5.Caption := DmAux.Qry_Aux.FieldByName('nome').AsString;
+         Memo5.lines.Add(DmAux.Qry_Aux.FieldByName('comentario').AsString);
+         memo5.Visible := true;
+         Lblnome5.Visible := true;
+      end;
+
+     end;
+     Inc(Card);
+     DmAux.Qry_aux.Next;
+
+  end;
+
+end;
+
+end.

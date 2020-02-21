@@ -8,7 +8,8 @@ uses
   U_Produto in 'U_Produto.pas' {F_Produto},
   U_Aux in 'U_Aux.pas' {DmAux: TDataModule},
   U_Funcoes in 'U_Funcoes.pas',
-  U_Anuncio in 'U_Anuncio.pas' {t};
+  U_Anuncio in 'U_Anuncio.pas' {t},
+  U_MinhaConta in 'U_MinhaConta.pas' {F_MinhaConta};
 
 {$R *.res}
 

@@ -1,9 +1,11 @@
 object F_Anuncio: TF_Anuncio
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'An'#250'ncio'
-  ClientHeight = 484
-  ClientWidth = 593
+  ClientHeight = 493
+  ClientWidth = 581
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -402,56 +404,56 @@ object F_Anuncio: TF_Anuncio
     Height = 13
     Caption = 'Adicionar ao carrinho'
   end
-  object ShapeComentario: TShape
+  object LblNome1: TLabel
     Left = 344
-    Top = 8
-    Width = 240
-    Height = 385
+    Top = 300
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
     Visible = False
   end
-  object Label1: TLabel
-    Left = 360
-    Top = 24
-    Width = 31
+  object LblNome2: TLabel
+    Left = 344
+    Top = 225
+    Width = 46
     Height = 13
-    Caption = 'Label1'
+    Caption = 'LblNome2'
+    Transparent = False
+    Visible = False
   end
-  object Label2: TLabel
-    Left = 360
-    Top = 95
-    Width = 31
+  object LblNome3: TLabel
+    Left = 344
+    Top = 154
+    Width = 46
     Height = 13
-    Caption = 'Label2'
+    Caption = 'LblNome3'
+    Visible = False
   end
-  object Label3: TLabel
-    Left = 360
-    Top = 170
-    Width = 31
+  object LblNome4: TLabel
+    Left = 344
+    Top = 83
+    Width = 46
     Height = 13
-    Caption = 'Label3'
+    Caption = 'LblNome4'
+    Visible = False
   end
-  object Label4: TLabel
-    Left = 360
-    Top = 248
-    Width = 31
+  object LblNome5: TLabel
+    Left = 344
+    Top = 8
+    Width = 46
     Height = 13
-    Caption = 'Label4'
-  end
-  object Label5: TLabel
-    Left = 360
-    Top = 316
-    Width = 31
-    Height = 13
-    Caption = 'Label5'
+    Caption = 'LblNome5'
+    Visible = False
   end
   object Mm1: TMemo
     Left = 15
-    Top = 289
-    Width = 199
-    Height = 40
+    Top = 288
+    Width = 297
+    Height = 59
     Margins.Left = 10
     Margins.Bottom = 10
     BorderStyle = bsNone
+    HideSelection = False
     Lines.Strings = (
       'Aproveite os excelentes pre'#231'os em '
       'produtos Philco. Encontre todos '
@@ -495,48 +497,88 @@ object F_Anuncio: TF_Anuncio
     ResHandle = 0
   end
   object Memo1: TMemo
-    Left = 360
-    Top = 43
+    Left = 344
+    Top = 319
     Width = 209
     Height = 46
+    BorderStyle = bsNone
     Lines.Strings = (
       'Memo1')
+    ReadOnly = True
     TabOrder = 4
+    Visible = False
   end
   object Memo2: TMemo
-    Left = 360
-    Top = 116
+    Left = 344
+    Top = 246
     Width = 209
     Height = 46
+    BorderStyle = bsNone
     Lines.Strings = (
       'Memo1')
+    ReadOnly = True
     TabOrder = 5
+    Visible = False
   end
   object Memo3: TMemo
-    Left = 360
-    Top = 191
+    Left = 344
+    Top = 173
     Width = 209
     Height = 46
+    BorderStyle = bsNone
     Lines.Strings = (
       'Memo1')
+    ReadOnly = True
     TabOrder = 6
+    Visible = False
   end
   object Memo4: TMemo
-    Left = 360
-    Top = 264
+    Left = 344
+    Top = 102
     Width = 209
     Height = 46
+    BorderStyle = bsNone
     Lines.Strings = (
       'Memo1')
+    ReadOnly = True
     TabOrder = 7
+    Visible = False
   end
   object Memo5: TMemo
-    Left = 360
-    Top = 335
+    Left = 344
+    Top = 27
     Width = 209
     Height = 46
+    BorderStyle = bsNone
     Lines.Strings = (
       'Memo1')
+    ReadOnly = True
     TabOrder = 8
+    Visible = False
+  end
+  object BtnAddComentario: TsuiButton
+    Left = 441
+    Top = 440
+    Width = 112
+    Height = 27
+    Caption = 'Adicionar coment'#225'rio'
+    AutoSize = False
+    UIStyle = DeepBlue
+    TabOrder = 9
+    Transparent = False
+    ModalResult = 0
+    FocusedRectMargin = 2
+    Layout = blGlyphLeft
+    Spacing = 4
+    MouseContinuouslyDownInterval = 100
+    OnClick = BtnAddComentarioClick
+    ResHandle = 0
+  end
+  object MmComentario: TMemo
+    Left = 344
+    Top = 391
+    Width = 209
+    Height = 46
+    TabOrder = 10
   end
 end
